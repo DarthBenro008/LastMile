@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">LastMile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Welcome Screen
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome">Welcome to LastMile!</string>
+    <string name="welcome_det">How would you like to get started?</string>
 </resources>
