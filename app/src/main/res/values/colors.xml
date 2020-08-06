@@ -7,4 +7,6 @@
     <color name="white">#F3F3F3</color>
     <color name="black">#000</color>
     <color name="yellowAccent">#EA9215</color>
+    <color name="errorRed">#B00020</color>
+    <color name="successGreen">#1B5E20</color>
 </resources>
