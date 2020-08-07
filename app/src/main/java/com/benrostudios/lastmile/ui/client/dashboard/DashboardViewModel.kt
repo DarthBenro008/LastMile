@@ -10,8 +10,10 @@ class DashboardViewModel(
     val ordersList
         get() = clientRepo.ordersResponse
 
-    val createOrdersResponseCache
-        get() = clientRepo.ordersResponse
+    val networkError
+    get() = clientRepo.networkError
+    val createOrdersResponse
+        get() = clientRepo.createOrderResponse
 
     suspend fun createOrder(order: RequestOrder) {
         clientRepo.createOrder(order)

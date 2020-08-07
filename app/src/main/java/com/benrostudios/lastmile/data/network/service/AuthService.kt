@@ -25,7 +25,7 @@ interface AuthService {
 
     @Multipart
     @POST("/users/auth/")
-    fun userLogin(
+    suspend fun userLogin(
         @Part("username") username: RequestBody,
         @Part("password") password: RequestBody
     ): Response<UserResponse>

@@ -13,7 +13,7 @@ interface ClientService {
 
     @Multipart
     @POST
-    fun orderPackage(
+    suspend fun orderPackage(
         @Part("client_id ") client_id: RequestBody,
         @Part("pick_up_address") pickup_address: RequestBody,
         @Part("drop_address") drop_address: RequestBody,
@@ -28,12 +28,12 @@ interface ClientService {
 
     //Dynamic Link
     @PUT
-    fun cancelOrder(
+    suspend fun cancelOrder(
         @Query("") orderId: Int
     ): Response<ApiResponse>
 
     @GET("/client/orders/")
-    fun getPackageDetails(@Query("client_id") client_id: Int): Response<List<Order>>
+    suspend fun getPackageDetails(@Query("client_id") client_id: Int): Response<List<Order>>
 
     companion object {
         operator fun invoke(): ClientService {

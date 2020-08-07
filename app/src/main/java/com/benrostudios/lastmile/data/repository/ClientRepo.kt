@@ -11,4 +11,5 @@ interface ClientRepo {
     val ordersResponse: LiveData<List<Order>>
     val createOrderResponse: LiveData<ApiResponse>
     suspend fun deleteOrder(orderId: Int)
+    val networkError: LiveData<String>
 }

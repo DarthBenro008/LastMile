@@ -5,6 +5,15 @@
     <string name="Dashboard">Dashboard</string>
     <string name="profile">Profile</string>
 
+
+    //SignIn
+    <string name="signin">Sign In</string>
+    <string name="signin_sub">Tell us about yourself!</string>
+    <string name="signup_sub">Lets get you started!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="signup">Sign Up</string>
+
     //Welcome Screen
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
@@ -33,4 +42,7 @@
     <string name="hey_there">Welcome</string>
     <string name="pending_orders">Pending Orders</string>
     <string name="order_history">Order History</string>
+
+    //MISC
+    <string name="placeholder">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable sourceContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source</string>
 </resources>

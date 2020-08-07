@@ -26,5 +26,9 @@
         android:id="@+id/signUp"
         android:name="com.benrostudios.lastmile.ui.auth.signup.SignUp"
         android:label="sign_up_fragment"
-        tools:layout="@layout/sign_up_fragment" />
+        tools:layout="@layout/sign_up_fragment" >
+        <action
+            android:id="@+id/action_signUp_to_welcome"
+            app:destination="@id/welcome" />
+    </fragment>
 </navigation>

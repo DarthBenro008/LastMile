@@ -15,7 +15,7 @@ class ClientRepoImpl(
 
     private val _ordersList = MutableLiveData<List<Order>>()
     private val _createResponse = MutableLiveData<ApiResponse>()
-    val networkError
+    override val networkError
         get() = _networkErrorResolution
 
     override suspend fun createOrder(order: RequestOrder) {
