@@ -5,5 +5,5 @@ import com.benrostudios.lastmile.data.repository.AuthRepoImpl
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    single<AuthRepo> { AuthRepoImpl() }
+    single<AuthRepo> { AuthRepoImpl(get()) }
 }
