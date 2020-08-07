@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/greyAccent</item>
         <item name="colorAccent">@color/blueAccent</item>
         <item name="android:windowBackground">@color/background</item>
