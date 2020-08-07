@@ -11,6 +11,8 @@
     <string name="welcome">Welcome to LastMile!</string>
     <string name="welcome_det">How would you like to get started?</string>
 
+    //Profile
+    <string name="about_us">About Last Mile</string>
     //Package Item
     <string name="status">Status : </string>
 
