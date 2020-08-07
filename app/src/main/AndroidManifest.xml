@@ -3,7 +3,9 @@
     package="com.benrostudios.lastmile">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:usesCleartextTraffic="true"
         android:name=".LastMileApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,7 +15,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.delivery.DeliveryActivity" />
         <activity android:name=".ui.client.ClientActivity" />
-        <activity android:name=".ui.auth.AuthActivity">
+        <activity
+            android:name=".ui.auth.AuthActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

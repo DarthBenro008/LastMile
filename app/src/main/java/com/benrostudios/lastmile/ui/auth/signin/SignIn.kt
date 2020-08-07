@@ -7,14 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.benrostudios.lastmile.R
+import com.benrostudios.lastmile.data.models.User
+import com.benrostudios.lastmile.ui.base.ScopedFragment
+import kotlinx.android.synthetic.main.sign_in_fragment.*
+import kotlinx.coroutines.launch
+import org.koin.android.viewmodel.ext.android.viewModel
 
-class SignIn : Fragment() {
+class SignIn : ScopedFragment() {
+    private val viewModel by viewModel<SignInViewModel>()
 
     companion object {
         fun newInstance() = SignIn()
     }
-
-    private lateinit var viewModel: SignInViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +29,8 @@ class SignIn : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(SignInViewModel::class.java)
-        // TODO: Use the ViewModel
+
     }
+
 
 }

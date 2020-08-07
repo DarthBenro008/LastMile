@@ -5,7 +5,7 @@ import com.benrostudios.lastmile.data.models.User
 import com.benrostudios.lastmile.data.network.response.ApiResponse
 
 interface AuthRepo {
-    suspend fun registerUser(user: User)
+    suspend fun registerUser(user: User,type:String)
     suspend fun loginUser(user: User)
     val networkError: LiveData<String>
     val response: LiveData<ApiResponse>
