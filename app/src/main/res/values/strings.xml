@@ -11,6 +11,19 @@
     <string name="welcome">Welcome to LastMile!</string>
     <string name="welcome_det">How would you like to get started?</string>
 
+    //OrderDescription
+    <string name="description">Description : </string>
+    <string name="start_place">Pick Up : </string>
+    <string name="end_place">Deliver :</string>
+
+    //PlaceOrder
+    <string name="order_title">Order Title</string>
+    <string name="order_desc">Order Description</string>
+    <string name="order_pick_up">Pick Up</string>
+    <string name="order_drop">Drop</string>
+    <string name="place_order">Place Order</string>
+    <string name="order">Order</string>
+
     //Profile
     <string name="about_us">About Last Mile</string>
     //Package Item
