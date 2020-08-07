@@ -15,7 +15,7 @@ class SignInViewModel(
         get() = authRepo.networkError
 
     val response
-        get() = authRepo.response
+        get() = authRepo.userResponse
 
     suspend fun userSignIn(user: User) {
         viewModelScope.launch(Dispatchers.IO) {

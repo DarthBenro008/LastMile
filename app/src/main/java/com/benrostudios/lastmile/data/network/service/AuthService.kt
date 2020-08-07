@@ -1,6 +1,7 @@
 package com.benrostudios.lastmile.data.network.service
 
 import com.benrostudios.lastmile.data.network.response.ApiResponse
+import com.benrostudios.lastmile.data.network.response.UserResponse
 import com.benrostudios.lastmile.utils.Constants
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody
@@ -22,8 +23,12 @@ interface AuthService {
         @Part("user_type") userType: RequestBody
     ): Response<ApiResponse>
 
-    @POST
-    fun userLogin(): Response<ApiResponse>
+    @Multipart
+    @POST("/users/auth/")
+    fun userLogin(
+        @Part("username") username: RequestBody,
+        @Part("password") password: RequestBody
+    ): Response<UserResponse>
 
     companion object {
         private val interceptor: HttpLoggingInterceptor = HttpLoggingInterceptor().also {

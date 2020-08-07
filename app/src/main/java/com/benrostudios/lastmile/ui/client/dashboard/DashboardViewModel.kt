@@ -1,7 +1,23 @@
 package com.benrostudios.lastmile.ui.client.dashboard
 
 import androidx.lifecycle.ViewModel
+import com.benrostudios.lastmile.data.models.RequestOrder
+import com.benrostudios.lastmile.data.repository.ClientRepo
 
-class DashboardViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class DashboardViewModel(
+    private val clientRepo: ClientRepo
+) : ViewModel() {
+    val ordersList
+        get() = clientRepo.ordersResponse
+
+    val createOrdersResponseCache
+        get() = clientRepo.ordersResponse
+
+    suspend fun createOrder(order: RequestOrder) {
+        clientRepo.createOrder(order)
+    }
+
+    suspend fun getOrders(clientId: Int) {
+        clientRepo.fetchOrder(clientId)
+    }
 }

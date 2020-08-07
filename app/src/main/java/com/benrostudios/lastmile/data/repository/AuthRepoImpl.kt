@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.benrostudios.lastmile.data.models.User
 import com.benrostudios.lastmile.data.network.response.ApiResponse
+import com.benrostudios.lastmile.data.network.response.UserResponse
 import com.benrostudios.lastmile.data.network.service.AuthService
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -13,6 +14,7 @@ class AuthRepoImpl(
 ) : AuthRepo, BaseRepository() {
 
     private val _apiResponse = MutableLiveData<ApiResponse>()
+    private val _userResponse = MutableLiveData<UserResponse>()
 
     override suspend fun registerUser(user: User, type: String) {
         val username: RequestBody = user.username.toRequestBody()
@@ -21,7 +23,7 @@ class AuthRepoImpl(
         _apiResponse.postValue(
             safeApiCall(
                 call = { authService.userRegistration(username, password, userType) },
-                error = "Error registering user"
+                error = "User Already Exists!"
             )
         )
     }
@@ -29,17 +31,17 @@ class AuthRepoImpl(
     override suspend fun loginUser(user: User) {
         val username: RequestBody = user.username.toRequestBody()
         val password: RequestBody = user.password.toRequestBody()
-        _apiResponse.postValue(
-            //TODO: Pass User Object
+        _userResponse.postValue(
             safeApiCall(
-                call = { authService.userLogin() },
+                call = { authService.userLogin(username, password) },
                 error = "Error in login!"
             )
         )
     }
-
     override val networkError: LiveData<String>
         get() = _networkErrorResolution
     override val response: LiveData<ApiResponse>
         get() = _apiResponse
+    override val userResponse: LiveData<UserResponse>
+        get() = _userResponse
 }
