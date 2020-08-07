@@ -48,8 +48,8 @@ fun EditText.isValidEmail(): Boolean {
     }
 }
 
-fun View.errorSnackBar(msg: String){
-    val snack = Snackbar.make(this, msg, Snackbar.LENGTH_LONG)
+fun View.errorSnackBar(msg: String, indef: Boolean){
+    val snack = Snackbar.make(this, msg, if(indef) Snackbar.LENGTH_INDEFINITE else Snackbar.LENGTH_LONG)
     snack.setBackgroundTint(resources.getColor(R.color.errorRed))
     snack.show()
 }
