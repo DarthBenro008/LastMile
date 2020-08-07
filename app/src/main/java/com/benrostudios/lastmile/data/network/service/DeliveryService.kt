@@ -16,11 +16,13 @@ interface DeliveryService {
     @GET
     fun getAllOrdersAvailable(): Response<ApiResponse>
 
-    @GET
-    fun getOrderDetails(): Response<ApiResponse>
+//    @GET
+//    fun getOrderDetails(): Response<ApiResponse>
 
     @GET
     fun generateQR(): Response<ApiResponse>
+
+    //TODO: PARTNER ACCEPT
 
     companion object {
         operator fun invoke(): DeliveryService {

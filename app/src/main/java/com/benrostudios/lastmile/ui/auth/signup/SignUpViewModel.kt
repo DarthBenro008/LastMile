@@ -17,9 +17,9 @@ class SignUpViewModel(
         get() = authRepo.response
 
 
-    suspend fun registerUser(user: User) {
+    suspend fun registerUser(user: User,type:String) {
         viewModelScope.launch(Dispatchers.IO) {
-            authRepo.registerUser(user)
+            authRepo.registerUser(user,type)
         }
     }
 }

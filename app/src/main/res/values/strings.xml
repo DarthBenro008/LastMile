@@ -8,4 +8,12 @@
     <string name="sign_up">Sign Up</string>
     <string name="welcome">Welcome to LastMile!</string>
     <string name="welcome_det">How would you like to get started?</string>
+
+    //Package Item
+    <string name="status">Status : </string>
+
+    //DashBoard
+    <string name="hey_there">Welcome</string>
+    <string name="pending_orders">Pending Orders</string>
+    <string name="order_history">Order History</string>
 </resources>

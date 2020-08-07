@@ -15,11 +15,9 @@ interface ClientService {
     fun orderPackage(): Response<ApiResponse>
 
     @GET
-    fun getPackageStatus(): Response<ApiResponse>
-
-    @GET
     fun verifyQR(): Response<ApiResponse>
 
+    //Dynamic Link
     @PUT
     fun cancelOrder(): Response<ApiResponse>
 

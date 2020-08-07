@@ -40,7 +40,7 @@ class SignUp : ScopedFragment() {
     }
 
     private fun trial() = launch {
-        viewModel.registerUser(User("abc", "123"))
+        viewModel.registerUser(User("abc", "123"),"partner")
     }
 
     private fun listen() = launch {

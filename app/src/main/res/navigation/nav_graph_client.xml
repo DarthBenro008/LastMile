@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_client"
+    app:startDestination="@id/dashboard">
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.benrostudios.lastmile.ui.client.dashboard.Dashboard"
+        android:label="dashboard_fragment"
+        tools:layout="@layout/dashboard_fragment" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.benrostudios.lastmile.ui.common.profile.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
