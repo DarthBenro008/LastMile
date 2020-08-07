@@ -28,7 +28,7 @@ fun EditText.isValidAlphaNumeric(errorDisplay: String): Boolean {
 fun EditText.isValidPhone(): Boolean {
     val pattern = Regex("^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}\$")
     val validation: Boolean = pattern.containsMatchIn(this.text.toString())
-    return if (validation ) {
+    return if (validation) {
         true
     } else {
         this.error = "Please enter a valid mobile number"
@@ -48,13 +48,14 @@ fun EditText.isValidEmail(): Boolean {
     }
 }
 
-fun View.errorSnackBar(msg: String, indef: Boolean){
-    val snack = Snackbar.make(this, msg, if(indef) Snackbar.LENGTH_INDEFINITE else Snackbar.LENGTH_LONG)
+fun View.errorSnackBar(msg: String) {
+    val snack =
+        Snackbar.make(this, msg, Snackbar.LENGTH_LONG)
     snack.setBackgroundTint(resources.getColor(R.color.errorRed))
     snack.show()
 }
 
-fun View.successSnackBar(msg: String){
+fun View.successSnackBar(msg: String) {
     val snack = Snackbar.make(this, msg, Snackbar.LENGTH_LONG)
     snack.setBackgroundTint(resources.getColor(R.color.successGreen))
     snack.show()

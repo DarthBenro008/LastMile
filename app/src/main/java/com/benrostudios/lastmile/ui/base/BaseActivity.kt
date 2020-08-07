@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 
 
-open class BaseActivity: AppCompatActivity() {
+open class BaseActivity : AppCompatActivity() {
 
     val networkState = MutableLiveData<Boolean>()
 
@@ -20,8 +20,9 @@ open class BaseActivity: AppCompatActivity() {
     }
 
 
-    private fun networkManager(){
-        val cm:ConnectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    private fun networkManager() {
+        val cm: ConnectivityManager =
+            getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val builder: NetworkRequest.Builder = NetworkRequest.Builder()
         cm.registerNetworkCallback(
             builder.build(),
@@ -32,10 +33,10 @@ open class BaseActivity: AppCompatActivity() {
                     networkState.postValue(true)
 
                 }
+
                 override fun onLost(network: Network) {
                     Log.i("MainActivity", "onLost!")
                     networkState.postValue(false)
-                    // doSomething
                 }
             }
         )
